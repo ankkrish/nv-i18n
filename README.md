@@ -3,6 +3,7 @@ nv-i18n
 
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/foundationsedge/nv-i18n/latest)
 ![GitHub contributors](https://img.shields.io/github/contributors/foundationsedge/nv-i18n)
+[![CLA assistant](https://cla-assistant.io/readme/badge/foundationsedge/nv-i18n)](https://cla-assistant.io/foundationsedge/nv-i18n)
 ![Maven Central Last Update](https://img.shields.io/maven-central/last-update/uk.co.foundationsedge/nv-i18n)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/14193/badge)](https://www.bestpractices.dev/projects/14193)
 [![OpenSSF Baseline](https://www.bestpractices.dev/projects/14193/baseline)](https://www.bestpractices.dev/projects/14193)
@@ -12,6 +13,7 @@ nv-i18n
 [![jdk badge](https://img.shields.io/badge/jdk-8-green.svg)](https://adoptium.net/en-GB/temurin/releases)
 [![MvnRepository](https://badges.mvnrepository.com/badge/uk.co.foundationsedge/nv-i18n/badge.svg)](https://mvnrepository.com/artifact/uk.co.foundationsedge/nv-i18n/)
 [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=foundationsedge_nv-i18n&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=foundationsedge_nv-i18n)
+[![OSSTRL level 6](https://raw.githubusercontent.com/adulau/osstrl/main/badges/osstrl-6.svg)](https://github.com/adulau/osstrl)
 
 <!--![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/foundationsedge/nv-i18n)-->
 <!--![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/maven/uk.co.foundationsedge%3Anv-i18n)-->
@@ -30,7 +32,7 @@ the enums directly (e.g. `CountryCode.JP.getName()`); no setup or configuration 
 required. The library is read-only reference data and processes no untrusted input,
 so secure use simply means keeping the dependency up to date.
 
-Package to support internationalization, containing enums for
+Package to support internationalisation/internationalization/i18n, containing enums for
 * ISO 3166-1 Country
 * ISO 639-1 Language
 * ISO 15924 Script etc.
@@ -47,7 +49,7 @@ Package to support internationalization, containing enums for
 License
 -------
 
-Apache License, Version 2.0
+Apache Licence, Version 2.0
 
 Maven
 -----
@@ -60,7 +62,7 @@ Maven
 </dependency>
 ```
 
-For the latest version-number look at [sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
+For the latest version-number look at [Sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
 
 Gradle
 ------
@@ -87,41 +89,8 @@ Source Code
 Example
 -------
 
-```java
-class Example {
-  public static void main(String[] args) {
-    // List all the country codes.
-    for (CountryCode code : CountryCode.values()) {
-      System.out.format("[%s] %s\n", code, code.getName());
-    }
-
-    // List all the language codes.
-    for (LanguageCode code : LanguageCode.values()) {
-      System.out.format("[%s] %s\n", code, code.getName());
-    }
-
-    // List all the locale codes.
-    for (LocaleCode code : LocaleCode.values()) {
-      String language = code.getLanguage().getName();
-      String country = code.getCountry() != null
-        ? code.getCountry().getName()
-        : null;
-
-      System.out.format("[%s] %s, %s\n", code, language, country);
-    }
-
-    // List all the script codes.
-    for (ScriptCode code : ScriptCode.values()) {
-      System.out.format("[%s] %03d %s\n", code, code.getNumeric(), code.getName());
-    }
-
-    // List all the currency codes.
-    for (CurrencyCode code : CurrencyCode.values()) {
-      System.out.format("[%s] %03d %s\n", code, code.getNumeric(), code.getName());
-    }
-  }
-}
-```
+A [sample client repository](https://github.com/foundationsedge/nv-i18n-client-sample) has been created to demonstrate how to
+make use of the `nv-i18n` as a dependency in your project.
 
 See Also
 --------
@@ -151,7 +120,7 @@ Contributors
 ------
 
 <a href="https://github.com/foundationsedge/nv-i18n/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=foundationsedge/nv-i18n" />
+  <img alt="contributors avatars" src="https://contrib.rocks/image?repo=foundationsedge/nv-i18n" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
