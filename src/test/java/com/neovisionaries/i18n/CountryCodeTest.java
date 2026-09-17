@@ -13,9 +13,8 @@ import org.junit.jupiter.api.Test;
 import static com.neovisionaries.i18n.CountryCode.getByCode;
 import static com.neovisionaries.i18n.CountryCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.CountryCode.getByLocale;
-
-
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
 
 class CountryCodeTest {
   @Test
@@ -364,6 +363,7 @@ class CountryCodeTest {
 
     assertThat(underTest.getCurrency()).isEqualTo(Currency.getInstance(Locale.UK));
   }
+
   @Test
   void getCurrencyForCountryWithoutOne() {
     CountryCode underTest = CountryCode.AC;
